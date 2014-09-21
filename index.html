@@ -67,18 +67,16 @@
           });
           
           //*** меняем js анимацию на css анимацию
-          
-          $(selector + ' span').css(
-              {
-                transition: 'height ' + timeout/1000 + 's linear',
-                height: $(selector).height()/2
-              }
-          );
           setTimeout(function() {
             $(selector + ' span').css(
-              {transition: 'none' }
+                {
+                  transition: 'height ' + timeout/1000 + 's linear',
+                  height: $(selector).height()/2
+                }
             );
-            run_equalizer(selector, 1000);
+            setTimeout(function() {
+              run_equalizer(selector, 1000);
+            }, 1000);
           }, 1000);
           
           //***
