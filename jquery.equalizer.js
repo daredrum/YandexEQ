@@ -65,9 +65,7 @@
     var settings = $.extend({}, defaults, options);
     
     return this.each(function() {
-      
       setEqualizer(this, settings.timeout, settings.colWidth);
-      
     });
     
   }
